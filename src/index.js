@@ -22,6 +22,18 @@ function updateTime() {
     let parisTime = parisDate.format("H:mm:ss [<small>]A[</small>]");
     parisTimeElement.innerHTML = parisTime;
   }
+
+  let sydneyElement = document.querySelector("#sydney");
+  if (sydneyElement) {
+    let sydneyDateElement = sydneyElement.querySelector(".date");
+    let sydneyTimeElement = sydneyElement.querySelector(".time");
+
+    let sydneyDate = moment.tz("Australia/Sydney");
+    sydneyDateElement.innerHTML = sydneyDate.format("MMMM Do YYYY");
+
+    let sydneyTime = sydneyDate.format("H:mm:ss [<small>]A[</small>]");
+    sydneyTimeElement.innerHTML = sydneyTime;
+  }
 }
 
 function displayCity(event) {
