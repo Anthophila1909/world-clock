@@ -44,7 +44,8 @@ function displayCity(event) {
             <div class="date">${cityDate}</div>
           </div>
           <div class="time">${cityTime}</div>
-        </div>`;
+        </div>
+        <a href="/">Back to all cities</a>`;
 }
 
 let selectCityElement = document.querySelector("#city");
