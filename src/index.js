@@ -26,6 +26,10 @@ function updateTime() {
 
 function displayCity(event) {
   let selectedCityValue = event.target.value;
+  if (selectedCityValue === "current") {
+    selectedCityValue = moment.tz.guess();
+  }
+
   let selectedCity = selectedCityValue.replace("_", " ").split("/")[1];
   let cityDate = moment().tz(selectedCityValue).format("MMMM Do YYYY");
   let cityTime = moment()
